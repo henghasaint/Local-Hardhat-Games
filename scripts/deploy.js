@@ -1,5 +1,8 @@
 // replace the name of the contract with which one you want to deploy!
-const contractName = "Game1";
+// const contractName = "Game1";
+// const contractName = "Game2";
+// const contractName = "Game3";
+const contractName = "Game4";
 
 async function main() {
   const Game = await hre.ethers.getContractFactory(contractName);
@@ -9,8 +12,8 @@ async function main() {
 }
 
 main()
- .then(() => process.exit(0))
- .catch(error => {
-   console.error(error);
-   process.exit(1);
- });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
