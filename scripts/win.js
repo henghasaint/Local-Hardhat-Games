@@ -10,8 +10,11 @@
 // const gameAddr = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
 // const contractName = "Game3";
 
-const gameAddr = "0x0B306BF915C4d645ff596e518fAf3F9669b97016";
-const contractName = "Game4";
+// const gameAddr = "0x0B306BF915C4d645ff596e518fAf3F9669b97016";
+// const contractName = "Game4";
+
+const gameAddr = "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c";
+const contractName = "Game5";
 
 async function main() {
   // attach to the game
@@ -30,7 +33,12 @@ async function main() {
   // const tx = await game.win(45);
 
   // // game4:
-  const tx = await game.win(56);
+  // const tx = await game.win(56);
+
+  // // game5:
+  await game.giveMeAllowance(100001);
+  await game.mint(10001);
+  const tx = await game.win();
 
   // did you win? Check the transaction receipt!
   // if you did, it will be in both the logs and events array
